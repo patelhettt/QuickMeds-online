@@ -1,0 +1,25 @@
+{
+  "name": "quickmeds",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000q\u0000u\u0000i\u0000c\u0000k\u0000m\u0000e\u0000d\u0000s\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "cd backend && npm install",
+    "start-server": "cd backend && node index.js",
+    "install-client": "cd frontend && npm install",
+    "build-client": "cd frontend && npm run build",
+    "start-client": "cd frontend && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patelhettt/QuickMeds-online.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/patelhettt/QuickMeds-online/issues"
+  },
+  "homepage": "https://github.com/patelhettt/QuickMeds-online#readme"
+}

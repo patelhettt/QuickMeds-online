@@ -16,7 +16,7 @@ import { toast } from 'react-toastify';
 import DashboardPageHeading from '../../../components/headings/DashboardPageHeading';
 import AddModal from '../../../components/modals/AddModal';
 
-const API_BASE_URL = 'https://quickmeds-backend-online.onrender.com:10000/api/products/pharmacy'; 
+const API_BASE_URL = 'https://quickmeds-backend-online.onrender.com/api/products/pharmacy'; 
 
 const NonPharmacyProducts = () => {
     const [pharmacyProducts, setPharmacyProducts] = useState([]);

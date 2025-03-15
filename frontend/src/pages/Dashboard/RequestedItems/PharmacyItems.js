@@ -59,7 +59,7 @@ const PharmacyItems = () => {
         const productDetails = { tradeName, genericName, strength, category, company, stock, packType, purchaseUnitType, purchasePackSize, packTp, unitTp, purchaseVatPercent, purchaseVatTaka, purchaseDiscountPercent, purchaseDiscountTaka, salesUnitType, salePackSize, packMrp, unitMrp, salesVatPercent, salesVatTaka, salesDiscountPercent, salesDiscountTaka, addedBy, addedToDbAt };
 
         // send data to server
-        fetch('https://quickmeds-backend-online.onrender.com:10000/api/requestedItems/pharmacy', {
+        fetch('https://quickmeds-backend-online.onrender.com/api/requestedItems/pharmacy', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -79,7 +79,7 @@ const PharmacyItems = () => {
     const [pharmacyItems, setpharmacyItems] = useState([]);
 
     useEffect(() => {
-        fetch('https://quickmeds-backend-online.onrender.com:10000/api/requestedItems/pharmacy')
+        fetch('https://quickmeds-backend-online.onrender.com/api/requestedItems/pharmacy')
             .then(res => res.json())
             .then(products => setpharmacyItems(products));
     }, []);
@@ -254,7 +254,7 @@ const PharmacyItems = () => {
                                         <span className='flex items-center gap-x-1'>
                                             <EditButton />
                                             <DeleteButton
-                                                deleteApiLink='https://quickmeds-backend-online.onrender.com:10000/api/requestedItems/pharmacy/'
+                                                deleteApiLink='https://quickmeds-backend-online.onrender.com/api/requestedItems/pharmacy/'
                                                 itemId={product._id}
                                                 name={product.tradeName} />
                                         </span>

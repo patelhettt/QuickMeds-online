@@ -59,7 +59,7 @@ const ExpiresOrDamagesReturns = () => {
         const productDetails = { tradeName, genericName, strength, category, company, stock, packType, purchaseUnitType, purchasePackSize, packTp, unitTp, purchaseVatPercent, purchaseVatTaka, purchaseDiscountPercent, purchaseDiscountTaka, salesUnitType, salePackSize, packMrp, unitMrp, salesVatPercent, salesVatTaka, salesDiscountPercent, salesDiscountTaka, addedBy, addedToDbAt };
 
         // send data to server
-        fetch('https://quickmeds-backend-online.onrender.com:10000/api/returns/expiresOrDamagesReturns', {
+        fetch('https://quickmeds-backend-online.onrender.com/api/returns/expiresOrDamagesReturns', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -79,7 +79,7 @@ const ExpiresOrDamagesReturns = () => {
     const [expiresOrDamagesReturns, setExpiresOrDamagesReturns] = useState([]);
 
     useEffect(() => {
-        fetch('https://quickmeds-backend-online.onrender.com:10000/api/returns/expiresOrDamagesReturns')
+        fetch('https://quickmeds-backend-online.onrender.com/api/returns/expiresOrDamagesReturns')
             .then(res => res.json())
             .then(products => setExpiresOrDamagesReturns(products));
     }, []);
@@ -254,7 +254,7 @@ const ExpiresOrDamagesReturns = () => {
                                         <span className='flex items-center gap-x-1'>
                                             <EditButton />
                                             <DeleteButton
-                                                deleteApiLink='https://quickmeds-backend-online.onrender.com:10000/api/returns/expiresOrDamagesReturns/'
+                                                deleteApiLink='https://quickmeds-backend-online.onrender.com/api/returns/expiresOrDamagesReturns/'
                                                 itemId={product._id}
                                                 name={product.tradeName} />
                                         </span>

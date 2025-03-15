@@ -27,7 +27,7 @@ const Employees = () => {
     );
 
     // Define the API URL using an environment variable or a fallback
-    const API_URL = process.env.REACT_APP_API_URL || "https://quickmeds-backend-online.onrender.com:10000";
+    const API_URL = process.env.REACT_APP_API_URL || "https://quickmeds-backend-online.onrender.com";
 
     const addEmployee = async (event) => {
         event.preventDefault();

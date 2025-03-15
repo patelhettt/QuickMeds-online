@@ -27,7 +27,7 @@ const SuppliersPayments = () => {
     const [suppliersPayments, setSuppliersPayments] = useState([]);
 
     useEffect(() => {
-        fetch('https://quickmeds-backend-online.onrender.com:10000/api/suppliers/payments')
+        fetch('https://quickmeds-backend-online.onrender.com/api/suppliers/payments')
             .then(res => res.json())
             .then(products => setSuppliersPayments(products));
     }, []);

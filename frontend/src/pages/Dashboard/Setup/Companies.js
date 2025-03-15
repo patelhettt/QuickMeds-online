@@ -38,7 +38,7 @@ const Companies = () => {
         const productDetails = { name, phone, website, email, address, addedBy, addedTime, updatedBy, updatedTime };
 
         // send data to server
-        fetch('https://quickmeds-backend-online.onrender.com:10000/api/setup/companies', {
+        fetch('https://quickmeds-backend-online.onrender.com/api/setup/companies', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -54,7 +54,7 @@ const Companies = () => {
     const [companies, setCompanies] = useState([]);
 
     useEffect(() => {
-        fetch('https://quickmeds-backend-online.onrender.com:10000/api/setup/companies')
+        fetch('https://quickmeds-backend-online.onrender.com/api/setup/companies')
             .then(res => res.json())
             .then(products => setCompanies(products));
     }, []);
@@ -126,7 +126,7 @@ const Companies = () => {
                                     company?.UpdatedAt?.slice(0, 10),
                                     <span className='flex items-center gap-x-1'>
                                         <EditButton />
-                                        <DeleteButton deleteApiLink='https://quickmeds-backend-online.onrender.com:10000/api/setup/companies/'
+                                        <DeleteButton deleteApiLink='https://quickmeds-backend-online.onrender.com/api/setup/companies/'
                                             itemId={company._id}
                                             name={company.name} />
                                     </span>

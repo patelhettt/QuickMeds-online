@@ -37,8 +37,8 @@ const POS = () => {
                 setLoading(true);
 
                 const [pharmacyRes, nonPharmacyRes] = await Promise.all([
-                    fetch('https://quickmeds-backend-online.onrender.com:10000/api/products/pharmacy?limit=50'),
-                    fetch('https://quickmeds-backend-online.onrender.com:10000/api/products/nonpharmacy?limit=50'),
+                    fetch('https://quickmeds-backend-online.onrender.com/api/products/pharmacy?limit=50'),
+                    fetch('https://quickmeds-backend-online.onrender.com/api/products/nonpharmacy?limit=50'),
                 ]);
 
                 if (!pharmacyRes.ok || !nonPharmacyRes.ok) {
@@ -70,7 +70,7 @@ const POS = () => {
             }
     
             try {
-                const searchEndpoint = 'https://quickmeds-backend-online.onrender.com:10000/api/products/pharmacy?all=true/';
+                const searchEndpoint = 'https://quickmeds-backend-online.onrender.com/api/products/pharmacy?all=true/';
     
                 const response = await fetch(
                     `${searchEndpoint}?q=${encodeURIComponent(searchTerm)}`
@@ -204,7 +204,7 @@ const POS = () => {
             created_at: new Date(),
         };
 
-        fetch('https://quickmeds-backend-online.onrender.com:10000/api/products/sales', {
+        fetch('https://quickmeds-backend-online.onrender.com/api/products/sales', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

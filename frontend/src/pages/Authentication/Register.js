@@ -40,7 +40,7 @@ const Register = () => {
         }
     
         try {
-            const response = await axios.post("http://localhost:5000/api/products/auth/register", formData);
+            const response = await axios.post("https://quickmeds-backend-online.onrender.com:10000/api/products/auth/register", formData);
             alert(response.data.message);
             navigate('/home'); // Redirect to home page after successful registration
         } catch (error) {

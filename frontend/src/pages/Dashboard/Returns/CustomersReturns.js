@@ -59,7 +59,7 @@ const CustomersReturns = () => {
         const productDetails = { tradeName, genericName, strength, category, company, stock, packType, purchaseUnitType, purchasePackSize, packTp, unitTp, purchaseVatPercent, purchaseVatTaka, purchaseDiscountPercent, purchaseDiscountTaka, salesUnitType, salePackSize, packMrp, unitMrp, salesVatPercent, salesVatTaka, salesDiscountPercent, salesDiscountTaka, addedBy, addedToDbAt };
 
         // send data to server
-        fetch('http://localhost:5000/api/returns/customers', {
+        fetch('https://quickmeds-backend-online.onrender.com:10000/api/returns/customers', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -79,7 +79,7 @@ const CustomersReturns = () => {
     const [customersReturns, setCustomersReturns] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/returns/customers')
+        fetch('https://quickmeds-backend-online.onrender.com:10000/api/returns/customers')
             .then(res => res.json())
             .then(products => setCustomersReturns(products));
     }, []);
@@ -254,7 +254,7 @@ const CustomersReturns = () => {
                                         <span className='flex items-center gap-x-1'>
                                             <EditButton />
                                             <DeleteButton
-                                                deleteApiLink='http://localhost:5000/api/returns/customers/'
+                                                deleteApiLink='https://quickmeds-backend-online.onrender.com:10000/api/returns/customers/'
                                                 itemId={product._id}
                                                 name={product.tradeName} />
                                         </span>

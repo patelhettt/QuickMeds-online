@@ -58,7 +58,7 @@ const PurchasePharmacyProducts = () => {
         const productDetails = { supplier, tradeName, category, strength, boxType, unitType, creator, createdAt };
 
         // send data to server
-        fetch('http://localhost:5000/api/purchases/pharmacy', {
+        fetch('https://quickmeds-backend-online.onrender.com:10000/api/purchases/pharmacy', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -81,20 +81,20 @@ const PurchasePharmacyProducts = () => {
 
     // get categories data
     useEffect(() => {
-        fetch('http://localhost:5000/api/setup/categories')
+        fetch('https://quickmeds-backend-online.onrender.com:10000/api/setup/categories')
             .then(res => res.json())
             .then(c => setCategories(c));
     }, []);
 
     // get unit types data
     useEffect(() => {
-        fetch('http://localhost:5000/api/setup/unitTypes')
+        fetch('https://quickmeds-backend-online.onrender.com:10000/api/setup/unitTypes')
             .then(res => res.json())
             .then(ut => setUnitTypes(ut));
     }, []);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/purchases/pharmacy')
+        fetch('https://quickmeds-backend-online.onrender.com:10000/api/purchases/pharmacy')
             .then(res => res.json())
             .then(products => setPharmacyProducts(products));
     }, []);
@@ -114,7 +114,7 @@ const PurchasePharmacyProducts = () => {
             {/* create new pharmacy product purchase */}
             <input type="checkbox" id="create-new-product" className="modal-toggle" />
             <label htmlFor="create-new-product" className="modal cursor-pointer z-50">
-                <label className="modal-box lg:w-10/12 md:w-11/12 w-full max-w-5xl relative" htmlFor="">
+                <div className="modal-box lg:w-10/12 md:w-11/12 w-full max-w-5xl relative">
                     <ModalCloseButton modalId={'create-new-product'} />
 
                     <ModalHeading modalHeading={'Create a Pharmacy Purchase'} />
@@ -176,7 +176,7 @@ const PurchasePharmacyProducts = () => {
                                                     <span className='flex items-center gap-x-1'>
                                                         <EditButton />
                                                         <DeleteButton
-                                                            deleteApiLink='http://localhost:5000/api/orders/pharmacy/'
+                                                            deleteApiLink='https://quickmeds-backend-online.onrender.com:10000/api/orders/pharmacy/'
                                                             itemId={product._id}
                                                         />
                                                     </span>
@@ -189,7 +189,7 @@ const PurchasePharmacyProducts = () => {
                             </div>
                         </div>
                     </form>
-                </label>
+                </div>
             </label>
 
             {/* update a pharmacy product */}
@@ -287,7 +287,7 @@ const PurchasePharmacyProducts = () => {
                                         <span className='flex items-center gap-x-1'>
                                             <EditButton />
                                             <DeleteButton
-                                                deleteApiLink='http://localhost:5000/api/purchases/pharmacy/'
+                                                deleteApiLink='https://quickmeds-backend-online.onrender.com:10000/api/purchases/pharmacy/'
                                                 itemId={product._id}
                                                 name={product.tradeName} />
                                         </span>

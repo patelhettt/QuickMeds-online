@@ -38,7 +38,7 @@ const Customers = () => {
         const productDetails = { name, phone, website, email, address, addedBy, addedTime, updatedBy, updatedTime };
 
         // send data to server
-        fetch('http://localhost:5000/api/products/customers', {
+        fetch('https://quickmeds-backend-online.onrender.com:10000/api/products/customers', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -54,7 +54,7 @@ const Customers = () => {
     const [customers, setCustomers] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/products/customers')
+        fetch('https://quickmeds-backend-online.onrender.com:10000/api/products/customers')
             .then(res => res.json())
             .then(products => setCustomers(products));
     }, []);
@@ -126,7 +126,7 @@ const Customers = () => {
                                     customer?.updatedTime?.slice(0, 10),
                                     <span className='flex items-center gap-x-1'>
                                         <EditButton />
-                                        <DeleteButton deleteApiLink='http://localhost:5000/api/products/customers/'
+                                        <DeleteButton deleteApiLink='https://quickmeds-backend-online.onrender.com:10000/api/products/customers/'
                                             itemId={customer._id}
                                             name={customer.name} />
                                     </span>

@@ -37,7 +37,7 @@ const Contact = () => {
             }
 
             // Send data to the backend API
-            const response = await fetch('http://localhost:5000/api/contactUs', {
+            const response = await fetch('https://quickmeds-backend-online.onrender.com:10000/api/contactUs', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

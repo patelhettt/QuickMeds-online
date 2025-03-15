@@ -35,7 +35,7 @@ const UnitTypes = () => {
         const unitTypeDetails = { name, description, addedBy, addedTime, updatedBy, updatedTime };
 
         // send data to server
-        fetch('http://localhost:5000/api/setup/unitTypes', {
+        fetch('https://quickmeds-backend-online.onrender.com:10000/api/setup/unitTypes', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -53,7 +53,7 @@ const UnitTypes = () => {
     const [unitTypes, setUnitTypes] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/setup/unitTypes')
+        fetch('https://quickmeds-backend-online.onrender.com:10000/api/setup/unitTypes')
             .then(res => res.json())
             .then(unitType => setUnitTypes(unitType));
     }, []);
@@ -123,7 +123,7 @@ const UnitTypes = () => {
                                         <span className='flex items-center gap-x-1'>
                                             <EditButton />
                                             <DeleteButton
-                                                deleteApiLink='http://localhost:5000/api/setup/unitTypes/'
+                                                deleteApiLink='https://quickmeds-backend-online.onrender.com:10000/api/setup/unitTypes/'
                                                 itemId={category._id}
                                                 name={category.name} />
                                         </span>

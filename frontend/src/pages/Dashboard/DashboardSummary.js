@@ -124,109 +124,109 @@ const DashboardSummary = () => {
     const [suppliersDocuments, setSuppliersDocuments] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/products/pharmacy')
+        fetch('https://quickmeds-backend-online.onrender.com:10000/api/products/pharmacy')
             .then(res => res.json())
             .then(products => setPharmacyProducts(products.length));
     }, [pharmacyProducts]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/products/nonPharmacy')
+        fetch('https://quickmeds-backend-online.onrender.com:10000/api/products/nonPharmacy')
             .then(res => res.json())
             .then(products => setNonPharmacyProducts(products.length));
     }, [nonPharmacyProducts]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/requestedItems/pharmacy')
+        fetch('https://quickmeds-backend-online.onrender.com:10000/api/requestedItems/pharmacy')
             .then(res => res.json())
             .then(products => setPharmacyRequestedItems(products.length));
     }, [pharmacyRequestedItems]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/requestedItems/nonPharmacy')
+        fetch('https://quickmeds-backend-online.onrender.com:10000/api/requestedItems/nonPharmacy')
             .then(res => res.json())
             .then(products => setNonPharmacyRequestedItems(products.length));
     }, [nonPharmacyRequestedItems]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/orders/pharmacy')
+        fetch('https://quickmeds-backend-online.onrender.com:10000/api/orders/pharmacy')
             .then(res => res.json())
             .then(products => setPharmacyOrders(products.length));
     }, [pharmacyOrders]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/orders/nonPharmacy')
+        fetch('https://quickmeds-backend-online.onrender.com:10000/api/orders/nonPharmacy')
             .then(res => res.json())
             .then(products => setNonPharmacyOrders(products.length));
     }, [nonPharmacyOrders]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/purchases/pharmacy')
+        fetch('https://quickmeds-backend-online.onrender.com:10000/api/purchases/pharmacy')
             .then(res => res.json())
             .then(products => setPharmacyPurchases(products.length));
     }, [pharmacyPurchases]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/purchases/nonPharmacy')
+        fetch('https://quickmeds-backend-online.onrender.com:10000/api/purchases/nonPharmacy')
             .then(res => res.json())
             .then(products => setNonPharmacyPurchases(products.length));
     }, [nonPharmacyPurchases]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/returns/customers')
+        fetch('https://quickmeds-backend-online.onrender.com:10000/api/returns/customers')
             .then(res => res.json())
             .then(products => setReturnsCustomers(products.length));
     }, [returnsCustomers]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/returns/expiresOrDamages')
+        fetch('https://quickmeds-backend-online.onrender.com:10000/api/returns/expiresOrDamages')
             .then(res => res.json())
             .then(products => setReturnsExpiresOrDamages(products.length));
     }, [returnsExpiresOrDamages]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/setup/categories')
+        fetch('https://quickmeds-backend-online.onrender.com:10000/api/setup/categories')
             .then(res => res.json())
             .then(products => setCategories(products.length));
     }, [categories]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/setup/unitTypes')
+        fetch('https://quickmeds-backend-online.onrender.com:10000/api/setup/unitTypes')
             .then(res => res.json())
             .then(products => setUnitTypes(products.length));
     }, [unitTypes]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/setup/companies')
+        fetch('https://quickmeds-backend-online.onrender.com:10000/api/setup/companies')
             .then(res => res.json())
             .then(products => setCompanies(products.length));
     }, [companies]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/products/employees')
+        fetch('https://quickmeds-backend-online.onrender.com:10000/api/products/employees')
             .then(res => res.json())
             .then(e => setEmployees(e.length));
     }, [employees]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/products/customers')
+        fetch('https://quickmeds-backend-online.onrender.com:10000/api/products/customers')
             .then(res => res.json())
             .then(e => setCustomers(e.length));
     }, [customers]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/suppliers/lists')
+        fetch('https://quickmeds-backend-online.onrender.com:10000/api/suppliers/lists')
             .then(res => res.json())
             .then(products => setSuppliersLists(products.length));
     }, [suppliersLists]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/suppliers/payments')
+        fetch('https://quickmeds-backend-online.onrender.com:10000/api/suppliers/payments')
             .then(res => res.json())
             .then(e => setSuppliersPayments(e.length));
     }, [suppliersPayments]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/suppliers/documents')
+        fetch('https://quickmeds-backend-online.onrender.com:10000/api/suppliers/documents')
             .then(res => res.json())
             .then(e => setSuppliersDocuments(e.length));
     }, [suppliersDocuments]);

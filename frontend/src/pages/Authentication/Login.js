@@ -14,7 +14,7 @@ const Login = () => {
         event.preventDefault();
 
         try {
-            const response = await axios.post("http://localhost:5000/api/products/auth/login", { email, password });
+            const response = await axios.post("https://quickmeds-backend-online.onrender.com:10000/api/products/auth/login", { email, password });
 
             // Store token in local storage
             localStorage.setItem("token", response.data.token);
